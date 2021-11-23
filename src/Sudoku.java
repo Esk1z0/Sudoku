@@ -143,20 +143,24 @@ public class Sudoku {
 	// TODO 2 ------------------------------------------------------------------------------------------
 	public static boolean estaOcupada(int[][] celdas, int fila, int columna) {
 		// SE PIDE escribir el codigo de esta funcion
+		return true;
 	}
 
 	// TODO 3 ------------------------------------------------------------------------------------------
 	public static boolean estaEnFila(int[][] celdas, int fila, int numero) {
 		// SE PIDE escribir el codigo de esta funcion
+		return true;
 	}
 
 	// TODO 4 ------------------------------------------------------------------------------------------
 	public static boolean estaEnColumna(int[][] celdas, int columna, int numero) {
 		// SE PIDE escribir el codigo de esta funcion
+		return true;
 	}
 
 	// TODO 5 ------------------------------------------------------------------------------------------
 	public static boolean estaEnCaja(int[][] celdas, int fila, int columna, int numero) {
 		// SE PIDE escribir el codigo de esta funcion
+		return true;
 	}
 }
