@@ -137,6 +137,35 @@ public class Sudoku {
 
 	// TODO 1 ------------------------------------------------------------------------------------------
 	public static void mostrar(int[][] celdas) {
+		int r = 0;
+		for(int i = 0; i <= 2; ++i) {
+			mostrarLinea();
+			if (i == 0) {
+				r = 0;
+			}
+			else if (i == 1){
+				r = 3;
+			}
+			else if (i == 2){
+				r = 6;
+			}
+			for (int f = r; f <= r+2; ++f) {
+
+				for (int j = 0; j <= (celdas.length - 1); ++j) {
+					if (j == 0 || j == 3 || j == 6) {
+						System.out.print("| ");
+					}
+					if (celdas[j][f] == 0) {
+						System.out.print("- ");
+					} else {
+						System.out.print(celdas[j][f] + " ");
+					}
+				}
+				System.out.print("|\n");
+			}
+
+		}
+		mostrarLinea();
 		// SE PIDE escribir el codigo de esta funcion
 	}
 
