@@ -150,7 +150,7 @@ public class Sudoku {
 				r = 6;
 			}
 			for (int f = r; f <= r+2; ++f) {
-
+				
 				for (int j = 0; j <= (celdas.length - 1); ++j) {
 					if (j == 0 || j == 3 || j == 6) {
 						System.out.print("| ");
@@ -182,8 +182,16 @@ public class Sudoku {
 
 	// TODO 3 ------------------------------------------------------------------------------------------
 	public static boolean estaEnFila(int[][] celdas, int fila, int numero) {
-		// SE PIDE escribir el codigo de esta funcion
-		return false;
+		int contador = 0;
+		boolean ocupado = false;
+		for (int j = 0; j <= 8; ++j){
+			if (celdas[fila-1][j] == numero){
+				contador += 1;
+			}
+		}
+		if (contador == 0) ocupado = false;
+		else if (contador != 0) ocupado = true;
+		return ocupado;
 	}
 
 	// TODO 4 ------------------------------------------------------------------------------------------
