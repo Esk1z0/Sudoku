@@ -210,7 +210,26 @@ public class Sudoku {
 
 	// TODO 5 ------------------------------------------------------------------------------------------
 	public static boolean estaEnCaja(int[][] celdas, int fila, int columna, int numero) {
-		// SE PIDE escribir el codigo de esta funcion
-		return false;
+		boolean ocupado = false;
+		int contador = 0;
+		int cajaFila = 0;
+		int cajaColumna = 0;
+
+		if (fila == 1 || fila == 2 || fila == 3) cajaFila = 0;
+		else if (fila == 4 || fila == 5 || fila == 6) cajaFila = 3;
+		else if (fila == 7 || fila == 8 || fila == 9) cajaFila = 6;
+		if (columna == 1 || columna == 2 || columna == 3) cajaColumna = 0;
+		else if (columna == 4 || columna == 5 || columna == 6) cajaColumna = 3;
+		else if (columna == 7 || columna == 8 || columna == 9) cajaColumna = 6;
+
+		for (int f = cajaFila; f <= cajaFila+2; ++f){
+			for (int c = cajaColumna; c <= cajaColumna+2; ++c){
+				if (celdas[f][c] == numero) contador += 1;
+			}
+		}
+
+		if (contador == 0) ocupado = false;
+		else if (contador != 0) ocupado = true;
+		return ocupado;
 	}
 }
