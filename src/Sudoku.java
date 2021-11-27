@@ -155,10 +155,10 @@ public class Sudoku {
 					if (j == 0 || j == 3 || j == 6) {
 						System.out.print("| ");
 					}
-					if (celdas[j][f] == 0) {
+					if (celdas[f][j] == 0) {
 						System.out.print("- ");
 					} else {
-						System.out.print(celdas[j][f] + " ");
+						System.out.print(celdas[f][j] + " ");
 					}
 				}
 				System.out.print("|\n");
@@ -196,8 +196,16 @@ public class Sudoku {
 
 	// TODO 4 ------------------------------------------------------------------------------------------
 	public static boolean estaEnColumna(int[][] celdas, int columna, int numero) {
-		// SE PIDE escribir el codigo de esta funcion
-		return false;
+		int contador = 0;
+		boolean ocupado = false;
+		for (int j = 0; j <= 8; ++j){
+			if (celdas[j][columna-1] == numero){
+				contador += 1;
+			}
+		}
+		if (contador == 0) ocupado = false;
+		else if (contador != 0) ocupado = true;
+		return ocupado;
 	}
 
 	// TODO 5 ------------------------------------------------------------------------------------------
